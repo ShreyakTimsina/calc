@@ -1,0 +1,225 @@
+:root {
+  --primary-color: rgb(180, 80, 80);
+  --container-color: rgb(250, 250, 250);
+  --background-color: rgb(230, 230, 230);
+  --numbers-color: rgb(1, 1, 173);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.wrapper {
+  width: 850px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* NAVIGATION BAR */
+
+header {
+  background-color: var(--container-color);
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 10px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+nav ul li:hover a,
+nav ul li a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.title {
+  color: var(--primary-color);
+  padding: 15px 0;
+}
+
+/* UTILITIES */
+
+.container {
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  padding: 20px 5px;
+  background-color: var(--container-color);
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  text-align: left;
+}
+
+span {
+  color: var(--numbers-color);
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+/* INITIAL INVESTMENT */
+.initial {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.initial form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.initial-total {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FUTURE ESTIMATIONS */
+.estimations {
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  display: flex;
+}
+
+.estimations form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* FORM UTILITIES */
+label {
+  font-size: 14px;
+}
+
+input {
+  padding: 5px 8px;
+  border: 1px solid rgb(172, 171, 171);
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+input:focus {
+  border: 1px solid black;
+}
+
+/* CALCULATE BUTTON */
+.btn-calc {
+  width: 200px;
+  padding: 8px 10px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-calc:hover {
+  background-color: rgb(196, 95, 95);
+}
+
+.btn-calc:active {
+  transform: scale(0.96);
+}
+
+/* RESULTS */
+.results {
+  margin: 30px 0;
+  display: none;
+}
+
+.section-title {
+  color: var(--primary-color);
+}
+
+.result-data-shares,
+.result-data-dividend,
+.result-data-overall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.result-data-overall {
+  border-top: 2px solid black;
+  margin-top: 5px;
+}
+
+/* MEDIA QUERIES */
+
+/* FOR LESS THAN 850PX */
+
+@media (max-width: 850px) {
+  .estimations form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .initial form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav .nav-container {
+    width: 100%;
+  }
+
+  nav .nav-container ul li {
+    width: 25%;
+  }
+
+  .initial {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .estimations form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SIMPLE CALCULATOR */

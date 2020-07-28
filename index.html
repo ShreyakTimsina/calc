@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Stock Calculator</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <nav>
+          <h1 class="title"><i class="fas fa-coins"></i> TheTitle</h1>
+          <div class="nav-container">
+            <ul>
+              <li><a href="index.html" class="active">Stocks</a></li>
+              <li><a href="compound.html">Compound</a></li>
+              <li><a href="simple.html">Simple</a></li>
+              <li><a href="contact.html">Reach Out</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="section-title">INITIAL INVESTMENT</h2>
+
+        <div class="initial">
+          <form>
+            <div class="column-flex">
+              <label>No of Stocks</label>
+              <input type="number" id="initial-no" placeholder="Quantity" />
+            </div>
+
+            <div class="column-flex">
+              <label>Price Per Share</label>
+              <input type="number" id="initial-price" placeholder="Price" />
+            </div>
+          </form>
+
+          <div class="initial-total">
+            <p>Total</p>
+            <span class="initial-total-price" id="initial-total">--</span>
+          </div>
+        </div>
+
+        <div class="estimations">
+          <form>
+            <div class="column-flex">
+              <label>Estimated Bonus</label>
+              <input
+                type="number"
+                id="bonus-percent"
+                placeholder="Bonus Percent"
+              />
+            </div>
+
+            <div class="column-flex">
+              <label>Estimated Dividend</label>
+              <input
+                type="number"
+                id="dividend-percent"
+                placeholder="Dividend Percent"
+              />
+            </div>
+
+            <div class="column-flex">
+              <label>Investment Period</label>
+              <input type="number" id="time" placeholder="Years" />
+            </div>
+
+            <div class="column-flex">
+              <label>Estimated Final Price</label>
+              <input
+                type="number"
+                id="estimated-price"
+                placeholder="Selling Price"
+              />
+            </div>
+          </form>
+        </div>
+
+        <button id="calc-btn" class="btn-calc">Calculate</button>
+      </div>
+
+      <div class="results container">
+        <h2 class="section-title">RESULTS</h2>
+
+        <div class="result-data-shares">
+          <div class="column-flex">
+            <h5>Total Shares</h5>
+            <span id="final-no">--</span>
+          </div>
+
+          <div class="column-flex">
+            <h5>Added Shares</h5>
+            <span id="final-added">--</span>
+          </div>
+
+          <div class="column-flex">
+            <h5>Total Estimated Price</h5>
+            <span id="final-total-price">--</span>
+          </div>
+        </div>
+
+        <div class="result-data-dividend">
+          <div class="column-flex">
+            <h5>Total Dividend</h5>
+            <span id="total-dividend">--</span>
+          </div>
+
+          <div class="column-flex">
+            <h5>Yearly Dividend Average</h5>
+            <span id="total-dividend-per-year">--</span>
+          </div>
+
+          <div class="column-flex">
+            <h5>Yearly Dividend Return</h5>
+            <span id="percent-dividend-per-year">--</span>
+          </div>
+        </div>
+
+        <div class="result-data-overall">
+          <div class="column-flex">
+            <h4>Grand Total</h4>
+            <span id="grand-total">100</span>
+          </div>
+
+          <div class="column-flex">
+            <h4>Total Return On Investment</h4>
+            <span id="total-returns">100</span>
+          </div>
+
+          <div class="column-flex">
+            <h4>Yearly Returns</h4>
+            <span id="yearly-returns">100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="stock.js"></script>
+  </body>
+</html>

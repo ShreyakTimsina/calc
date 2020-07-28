@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <nav>
+          <h1 class="title"><i class="fas fa-coins"></i> TheTitle</h1>
+          <div class="nav-container">
+            <ul>
+              <li><a href="index.html">Stocks</a></li>
+              <li><a href="compound.html">Compound</a></li>
+              <li><a href="simple.html" class="active">Simple</a></li>
+              <li><a href="contact.html">Reach Out</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="section-title">INITIAL DEPOSIT</h2>
+
+        <div class="initial-data">
+          <form>
+            <div class="column-flex">
+              <label>Initial Amount</label>
+              <input type="number" id="principle" placeholder="Principle" />
+            </div>
+
+            <div class="column-flex">
+              <label>Total Time</label>
+              <input type="number" id="time" placeholder="Years" />
+            </div>
+
+            <div class="column-flex">
+              <label>Interest Rate</label>
+              <input type="number" id="rate" placeholder="Rate" />
+            </div>
+          </form>
+        </div>
+
+        <button id="calc-btn" class="btn-calc">Calculate</button>
+      </div>
+
+      <div class="results container">
+        <h2 class="section-title">RESULTS</h2>
+
+        <div class="result-data-overall">
+          <div class="column-flex">
+            <h5>Final Amount</h5>
+            <span id="amount">--</span>
+          </div>
+
+          <div class="column-flex">
+            <h5>Total Interest</h5>
+            <span id="interest">--</span>
+          </div>
+
+          <div class="column-flex">
+            <h5>Interest Per Year</h5>
+            <span id="interest-per-year">--</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="simple.js"></script>
+  </body>
+</html>
