@@ -125,14 +125,16 @@ label {
   font-size: 14px;
 }
 
-input {
+input,
+textarea {
   padding: 5px 8px;
   border: 1px solid rgb(172, 171, 171);
   border-radius: 4px;
   margin: 2px 0;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   border: 1px solid black;
 }
 
