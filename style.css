@@ -137,7 +137,7 @@ input:focus {
 }
 
 /* CALCULATE BUTTON */
-.btn-calc {
+.btn {
   width: 200px;
   padding: 8px 10px;
   margin: 10px;
@@ -149,11 +149,11 @@ input:focus {
   color: white;
 }
 
-.btn-calc:hover {
+.btn:hover {
   background-color: rgb(196, 95, 95);
 }
 
-.btn-calc:active {
+.btn:active {
   transform: scale(0.96);
 }
 
@@ -177,6 +177,22 @@ input:focus {
 .result-data-overall {
   border-top: 2px solid black;
   margin-top: 5px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+
+.contact-form form input {
+  margin: 2px 0 5px;
+}
+
+.contact-form form .send-btn {
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* MEDIA QUERIES */
