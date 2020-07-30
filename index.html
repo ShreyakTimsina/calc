@@ -37,7 +37,7 @@
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
-    <title>Stock Calculator</title>
+    <title>Stock Investment Calculator</title>
   </head>
   <body>
     <header>
@@ -46,10 +46,18 @@
           <h1 class="title"><i class="fas fa-coins"></i> StockCalculator</h1>
           <div class="nav-container">
             <ul>
-              <li><a href="index.html" class="active">Stocks</a></li>
-              <li><a href="compound.html">Compound</a></li>
-              <li><a href="simple.html">Simple</a></li>
+              <li class="dropdown">
+                <l1 class="dropbtn">Calculators <i class="fas fa-chevron-down"></i></l1>
+                <div class="dropdown-content">
+                  <a href="index.html" class="active">Stocks</a>
+                  <a href="compound.html">Compound</a>
+                  <a href="simple.html">Simple</a>
+                </div>
+              </li>
+
+              <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Reach Out</a></li>
+              <li><a href="policy.html">Privacy Policy</a></li>
             </ul>
           </div>
         </nav>
@@ -115,6 +123,10 @@
         </div>
 
         <button id="calc-btn" class="btn">Calculate</button>
+        <div class="blog-links">
+          <a href="stockEnglish.html">How does this work?</a>
+          <!-- <a href="stockNepali.html">यो कसरी काम गर्छ?</a> -->
+        </div>
       </div>
 
       <div class="results container">
