@@ -2,29 +2,41 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173944133-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-173944133-1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-173944133-1');
+      gtag("config", "UA-173944133-1");
     </script>
 
     <!-- ADSENSE -->
-    <script 
-     data-ad-client="ca-pub-1743880800896284"
-     async 
-     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script
+      data-ad-client="ca-pub-1743880800896284"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=6">
-    <meta name="description" content="Calculate Everything Related To Stock Market And Investing.">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="Stocks, Invest, Savings, Dividends, Bonus, IPO, Secondary Market, FPO, Right Share Calculator, Market, Shares, NEPSE, SEBON, Nepse, Sebon, Stock Market, Trading, Money,
-    Traders, Stockbrokers, Crypto Traders,Social Traders,Spread Betting,Stock Alerts,Uk Stock Market,ETF''s,Stock Futures,Stock Market Coach,Forex Coach,Peak Performance Coach,Trading Coach,Stockbrokers,Stocks,Shares,Equities,Forex,Lse Share Prices,Stock Charts,Share Forums,Markets,Stocks,Investment,Trading,Financial,CFDs,Shares,Foreign Exchange,Advisory,Online Trading,Execution Only Trading,,10GBP,,LSE,,Stockbroking,Equities, Online Trading,,Contracts For Difference,Advisory,Shares,Stock Market,Investment ,Stock Trading And Investing ,Forex Trading , Long Term Investing, Online Trading ,Day Trading ">
-    <meta title="Stock Investment Calculator">
+    <meta http-equiv="X-UA-Compatible" content="IE=6" />
+    <meta
+      name="description"
+      content="Calculate Everything Related To Stock Market And Investing."
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="Stocks, Invest, Savings, Dividends, Bonus, IPO, Secondary Market, FPO, Right Share Calculator, Market, Shares, NEPSE, SEBON, Nepse, Sebon, Stock Market, Trading, Money,
+    Traders, Stockbrokers, Crypto Traders,Social Traders,Spread Betting,Stock Alerts,Uk Stock Market,ETF''s,Stock Futures,Stock Market Coach,Forex Coach,Peak Performance Coach,Trading Coach,Stockbrokers,Stocks,Shares,Equities,Forex,Lse Share Prices,Stock Charts,Share Forums,Markets,Stocks,Investment,Trading,Financial,CFDs,Shares,Foreign Exchange,Advisory,Online Trading,Execution Only Trading,,10GBP,,LSE,,Stockbroking,Equities, Online Trading,,Contracts For Difference,Advisory,Shares,Stock Market,Investment ,Stock Trading And Investing ,Forex Trading , Long Term Investing, Online Trading ,Day Trading "
+    />
+    <meta title="Stock Investment Calculator" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -35,7 +47,7 @@
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title>Stock Investment Calculator</title>
   </head>
@@ -47,7 +59,9 @@
           <div class="nav-container">
             <ul>
               <li class="dropdown">
-                <l1 class="dropbtn">Calculators <i class="fas fa-chevron-down"></i></l1>
+                <l1 class="dropbtn"
+                  >Calculators <i class="fas fa-chevron-down"></i
+                ></l1>
                 <div class="dropdown-content">
                   <a href="index.html" class="active">Stocks</a>
                   <a href="compound.html">Compound</a>
@@ -67,22 +81,30 @@
       <div class="container">
         <h2 class="section-title">INITIAL INVESTMENT</h2>
 
-        <div class="initial">
-          <form>
-            <div class="column-flex">
-              <label>No of Stocks</label>
-              <input type="number" id="initial-no" placeholder="Quantity" />
-            </div>
+        <div class="column-flex">
+          <div class="initial">
+            <form>
+              <div class="column-flex">
+                <label>No of Stocks</label>
+                <input type="number" id="initial-no" placeholder="Quantity" />
+              </div>
 
-            <div class="column-flex">
-              <label>Price Per Share</label>
-              <input type="number" id="initial-price" placeholder="Price" />
-            </div>
-          </form>
+              <div class="column-flex">
+                <label>Price Per Share</label>
+                <input type="number" id="initial-price" placeholder="Price" />
+              </div>
+            </form>
 
-          <div class="initial-total">
-            <p>Total</p>
-            <span class="initial-total-price" id="initial-total">--</span>
+            <div class="initial-total">
+              <p>Total</p>
+              <span class="initial-total-price" id="initial-total">--</span>
+            </div>
+          </div>
+          <div class="fees">
+            <span class="total-price" id="total-price"></span>
+            <span class="demat-fee" id="demat-fee"></span>
+            <span class="sebon-fee" id="sebon-fee"></span>
+            <span class="broker-commission" id="broker-commission"></span>
           </div>
         </div>
 
@@ -156,8 +178,8 @@
           </div>
 
           <div class="column-flex">
-            <h5>Yearly Dividend Average</h5>
-            <span id="total-dividend-per-year">--</span>
+            <h5>Dividend After Taxes</h5>
+            <span id="total-dividend-after-taxes">--</span>
           </div>
 
           <div class="column-flex">
@@ -166,20 +188,39 @@
           </div>
         </div>
 
+        <div class="result-data-fees fees">
+          <div class="column-flex">
+            <h5>Demat Fee:</h5>
+            <span id="result-demat-fee">--</span>
+          </div>
+          <div class="column-flex">
+            <h5>SEBON Fee:</h5>
+            <span id="result-sebon-fee">--</span>
+          </div>
+          <div class="column-flex">
+            <h5>Broker Commission:</h5>
+            <span id="result-broker-commission">--</span>
+          </div>
+          <div class="column-flex">
+            <h5>Capital Gain Tax:</h5>
+            <span id="result-gain-tax">--</span>
+          </div>
+        </div>
+
         <div class="result-data-overall">
           <div class="column-flex">
-            <h4>Total</h4>
-            <span id="grand-total">--</span>
+            <h4>Total Receivable</h4>
+            <span id="total-receivable">--</span>
           </div>
 
           <div class="column-flex">
-            <h4>Total Return On Investment</h4>
-            <span id="total-returns">--/span>
+            <h4>Overall Total</h4>
+            <span id="overall-total">--</span>
           </div>
 
           <div class="column-flex">
-            <h4>Yearly Returns</h4>
-            <span id="yearly-returns">--</span>
+            <h4>Profit</h4>
+            <span id="total-profit">--</span>
           </div>
         </div>
       </div>

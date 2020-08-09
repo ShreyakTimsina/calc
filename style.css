@@ -81,7 +81,7 @@ li.dropdown {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -125,8 +125,6 @@ span {
 
 /* INITIAL INVESTMENT */
 .initial {
-  border-bottom: 1px solid black;
-  padding: 10px 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
@@ -140,6 +138,14 @@ span {
 .initial-total {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.fees {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
 }
 
 /* FUTURE ESTIMATIONS */
@@ -294,13 +300,19 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
   }
-  ` .initial form {
+  .initial form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media (max-width: 550px) {
+  nav ul a,
+  .dropbtn {
+    padding: 6px 5px;
+    font-size: 14px;
+  }
+
   .initial {
     display: grid;
     grid-template-columns: 1fr;
@@ -314,5 +326,38 @@ textarea:focus {
   .result-data-overall {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .fees {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 350px) {
+  nav ul a,
+  .dropbtn {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 331px) {
+  nav ul a,
+  .dropbtn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 311px) {
+  nav ul a,
+  .dropbtn {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 291px) {
+  nav ul a,
+  .dropbtn {
+    font-size: 10px;
   }
 }
