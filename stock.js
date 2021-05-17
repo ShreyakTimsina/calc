@@ -70,18 +70,18 @@ function updateTotal() {
 
     // Broker commission
     if (totalPrice <= 50000) {
-      brokerCommission = (0.6 / 100) * totalPrice;
+      brokerCommission = (0.4 / 100) * totalPrice;
       if (brokerCommission < 25) {
         brokerCommission = 25;
       }
     } else if (totalPrice > 50000 && totalPrice <= 500000) {
-      brokerCommission = (0.55 / 100) * totalPrice;
+      brokerCommission = (0.37 / 100) * totalPrice;
     } else if (totalPrice > 500000 && totalPrice <= 2000000) {
-      brokerCommission = (0.5 / 100) * totalPrice;
+      brokerCommission = (0.34 / 100) * totalPrice;
     } else if (totalPrice > 2000000 && totalPrice <= 10000000) {
-      brokerCommission = (0.45 / 100) * totalPrice;
+      brokerCommission = (0.3 / 100) * totalPrice;
     } else if (totalPrice > 10000000) {
-      brokerCommission = (0.4 / 100) * totalPrice;
+      brokerCommission = (0.27 / 100) * totalPrice;
     }
   }
 
@@ -147,18 +147,18 @@ function calculate() {
     //  BROKER COMMISSION
     var brokerCommission = 0;
     if (finalTotalPrice <= 50000) {
-      brokerCommission = (0.6 / 100) * finalTotalPrice;
+      brokerCommission = (0.4 / 100) * finalTotalPrice;
       if (brokerCommission < 25) {
         brokerCommission = 25;
       }
     } else if (finalTotalPrice > 50000 && finalTotalPrice <= 500000) {
-      brokerCommission = (0.55 / 100) * finalTotalPrice;
+      brokerCommission = (0.37 / 100) * finalTotalPrice;
     } else if (finalTotalPrice > 500000 && finalTotalPrice <= 2000000) {
-      brokerCommission = (0.5 / 100) * finalTotalPrice;
+      brokerCommission = (0.34 / 100) * finalTotalPrice;
     } else if (finalTotalPrice > 2000000 && finalTotalPrice <= 10000000) {
-      brokerCommission = (0.45 / 100) * finalTotalPrice;
+      brokerCommission = (0.3 / 100) * finalTotalPrice;
     } else if (finalTotalPrice > 10000000) {
-      brokerCommission = (0.4 / 100) * finalTotalPrice;
+      brokerCommission = (0.27 / 100) * finalTotalPrice;
     }
   }
 
